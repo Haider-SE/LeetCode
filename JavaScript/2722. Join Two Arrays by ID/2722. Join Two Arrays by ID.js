@@ -5,7 +5,6 @@
 //  */
 // var join = function(arr1 = [{"id": 1,"x": 2,"y": 3},{"id": 2,"x": 3,"y": 6}], arr2 = [{"id": 2,"x": 10,"y": 20},{"id": 3,"x": 0,"y": 0}]) {
 
-   
 //     var concatedArray =  arr1.concat(arr2);
 //     concatedArray.map((res, key) => {
 //         arr2.map((ar2, k2) => {
@@ -40,25 +39,40 @@
 //         debugger;
 //        ans += s.charCodeAt(i) - s.charCodeAt(i+1)
 //     }
-    
+
 //     return ans
 // };
 // console.log(scoreOfString("hello"))
 
+// /**
+//  * @param {number[]} nums
+//  * @param {number} val
+//  * @return {number}
+//  */
+// var removeElement = function(nums, val) {
+//     var ans = nums.filter((num) => {
+//         return num !== val;
+//     })
+//     return ans
+// };
+// var myFUnc = removeElement;
 
-
+// console.log(myFUnc([3,2,2,3], 3))
 
 /**
- * @param {number[]} nums
- * @param {number} val
- * @return {number}
+ * @param {number} x
+ * @return {boolean}
  */
-var removeElement = function(nums, val) {
-    var ans = nums.filter((num) => {
-        return num !== val;
-    })
-    return ans
+var isPalindrome = function (x) {
+  var mod = 0;
+  var palindromeCheck = 0;
+  var original = x;
+  while (x > 0) {
+    mod = x % 10; // Get the last digit
+    x = Math.floor(x / 10); // Remove the last digit
+    palindromeCheck = palindromeCheck * 10 + mod; // Build the reversed number
+  }
+  return palindromeCheck === original;
 };
-var myFUnc = removeElement;
 
-console.log(myFUnc([3,2,2,3], 3))
+console.log(isPalindrome(122));
