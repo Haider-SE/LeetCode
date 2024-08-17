@@ -58,7 +58,7 @@
 // var myFUnc = removeElement;
 
 // console.log(myFUnc([3,2,2,3], 3))
-
+ 
 /**
  * @param {number} x
  * @return {boolean}
