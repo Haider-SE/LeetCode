@@ -95,3 +95,44 @@ var longestCommonPrefix = function (strs) {
    
    return prefix;
 };
+
+
+//1431. Kids With the Greatest Number of Candies
+/**
+ * @param {number[]} candies
+ * @param {number} extraCandies
+ * @return {boolean[]}
+ */
+var kidsWithCandies = function (candies, extraCandies) {
+    var withExtraCandies = [];
+    candies.forEach((candy) => {
+        withExtraCandies.push(candy + extraCandies)
+    });
+    var answer = [];
+    withExtraCandies.map((ecandy, key) => {
+        answer.push(candies.every(c => ecandy >= c))
+    })
+    return answer;
+
+};
+
+//1365. How Many Numbers Are Smaller Than the Current Number
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var smallerNumbersThanCurrent = function (nums) {
+    var answerArray = [];
+    var count = 0;
+    nums.forEach((number, keyNumber) => {
+        nums.forEach((num, keyNum) => {
+            if (keyNum != keyNumber) {
+                if (num < number) count++;
+            }
+        })
+        answerArray.push(count);
+        count = 0;
+    })
+    return answerArray;
+};
