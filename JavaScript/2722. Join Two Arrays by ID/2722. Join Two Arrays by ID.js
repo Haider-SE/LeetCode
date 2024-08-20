@@ -116,7 +116,7 @@ var kidsWithCandies = function (candies, extraCandies) {
 
 };
 
-//1365. How Many Numbers Are Smaller Than the Current Number
+//1365.   How Many Numbers Are Smaller Than the Current Number
 
 /**
  * @param {number[]} nums
