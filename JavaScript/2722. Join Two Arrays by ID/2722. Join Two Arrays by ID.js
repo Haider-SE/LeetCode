@@ -136,3 +136,16 @@ var smallerNumbersThanCurrent = function (nums) {
     })
     return answerArray;
 };
+
+/**
+ * @param {number[]} nums
+ * @param {number[]} index
+ * @return {number[]}
+ */
+var createTargetArray = function(nums, index) {
+    var newArray = [];
+     for(let i = 0; i < nums.length; i++){
+         newArray.splice(index[i], 0, nums[i]);
+     }
+     return newArray;
+ };
